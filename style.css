@@ -11,13 +11,18 @@
     bottom breadcrumbs (если ост время)
 */
 
+* { box-sizing: border-box }
+
 
 :root {
-  --fontSm: 12px;
-  --fontDefault: 16px;
-  --fontMd: 24px;
-  --fontLg: 32px;
-  --fontXl: 64px;
+  --fontXXS: 12px;
+  --fontXS: 16px;
+  --fontS: 19px;
+  --fontM: 24px;
+  --fontL: 32px;
+  --fontXL: 40px;
+  --fontXXL: 64px;
+  --fontXXXL: 70px;
 
   --colorDefault: rgba(255, 255, 255, .8);
   --colorBright: #fff;
@@ -26,6 +31,10 @@
   --colorAccentActive: #147ce5;
 
   --bgAccent: #161617;
+
+  --gridGutter: 20px;
+  --gridTileBorderRadius: 25px;
+  --gridTilePadding: 15px;
 }
 
 body {
@@ -33,7 +42,7 @@ body {
   color: var(--colorDefault);
   font-family: Helvetica, sans-serif;
   margin: 0;
-  font-size: var(--fontDefault);
+  font-size: var(--fontXS);
   line-height: 1.35;
   font-weight: 100;
 }
@@ -54,7 +63,7 @@ h1, h2, h3, h4 {
 }
 
 h3 {
-  font-size: var(--fontLg);
+  font-size: var(--fontL);
 }
 
 h4 {
@@ -101,7 +110,7 @@ video {
 }
 
 .wrap {
-  max-width: 980px;
+  max-width: 1020px;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 20px !important;
@@ -117,6 +126,14 @@ video {
 
 .btn:hover {
   background: var(--colorAccentActive);
+}
+
+.gradientText {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg,#ffb6ff,#b344ff);
+  overflow: hidden;
 }
 
 .linkWithArrow {
@@ -145,11 +162,11 @@ video {
 }
 
 .header {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
 .header .nav {
@@ -162,7 +179,7 @@ video {
 
 .nav {
   display: flex;
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   gap: 9px;
 }
 
@@ -171,7 +188,7 @@ video {
 }
 
 .top {
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -191,7 +208,7 @@ video {
 }
 
 .top h1 {
-  font-size: var(--fontMd);
+  font-size: var(--fontM);
   font-weight: normal;
 }
 
@@ -200,7 +217,7 @@ video {
   color: var(--colorBright);
   padding: 30px;
   text-align: center;
-  font-size: var(--fontMd);
+  font-size: var(--fontM);
 }
 
 .promo__in {
@@ -226,7 +243,7 @@ video {
 }
 
 .hero h2 {
-  font-size: var(--fontXl);
+  font-size: var(--fontXXL);
 }
 
 .main {
@@ -275,7 +292,7 @@ video {
 
 
 .footnote {
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   color: rgb(134, 134, 139);
   border-top: 1px solid;
   border-bottom: 1px solid;
@@ -294,7 +311,7 @@ video {
 
 .bottomNav {
   color: var(--colorDim);
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   display: flex;
   gap: 20px 40px;
   margin-bottom: 40px;
@@ -321,7 +338,7 @@ video {
 
 .footer {
   color: var(--colorDim);
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   padding-bottom: 10px;
 }
 
@@ -378,7 +395,7 @@ video {
 }
 
 .product__title {
-  font-size: var(--fontMd);
+  font-size: var(--fontM);
 }
 
 .product__title,
@@ -387,7 +404,7 @@ video {
 }
 
 .product__buy {
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -397,7 +414,7 @@ video {
 }
 
 .product__props {
-  font-size: var(--fontSm);
+  font-size: var(--fontXXS);
   padding-top: 20px;
   border-top: 1px solid;
   flex-grow: 1;
