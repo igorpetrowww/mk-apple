@@ -1,0 +1,34 @@
+.s {
+    font-size: var(--fontS);
+    line-height: 1.4211026316;
+    font-weight: 600;
+    letter-spacing: .012em;
+}
+
+.m {
+    font-size: var(--fontM);
+    line-height: 1.1666;
+    font-weight: 600;
+    letter-spacing: .009em;
+}
+
+.l {
+    font-size: var(--fontL);
+    line-height: 1.125;
+    font-weight: 600;
+    letter-spacing: .004em;
+}
+
+.xl {
+    font-size: var(--fontL);
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+.xxxl {
+    font-size: var(--fontXXXL);
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+}

@@ -31,6 +31,10 @@
   --colorAccentActive: #147ce5;
 
   --bgAccent: #161617;
+
+  --gridGutter: 20px;
+  --gridTileBorderRadius: 25px;
+  --gridTilePadding: 15px;
 }
 
 body {
@@ -106,7 +110,7 @@ video {
 }
 
 .wrap {
-  max-width: 980px;
+  max-width: 1020px;
   margin-left: auto !important;
   margin-right: auto !important;
   padding-left: 20px !important;
@@ -122,6 +126,14 @@ video {
 
 .btn:hover {
   background: var(--colorAccentActive);
+}
+
+.gradientText {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(180deg,#ffb6ff,#b344ff);
+  overflow: hidden;
 }
 
 .linkWithArrow {
@@ -150,11 +162,11 @@ video {
 }
 
 .header {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 40px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 40px;
 }
 
 .header .nav {
