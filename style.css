@@ -1,18 +1,4 @@
-/*
-  Типографика и отступы строгие для упрощения
-
-  TODO:
-    SVG viewport
-    linkWithArrow arrow
-    favicon
-    opengraph?
-    ↑ оставить ссылками на советы
-
-    bottom breadcrumbs (если ост время)
-*/
-
 * { box-sizing: border-box }
-
 
 :root {
   --fontXXS: 12px;
@@ -166,11 +152,17 @@ video {
   gap: 20px;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header .nav {
   flex-grow: 1;
+}
+
+.header .icon {
+  width: 16px;
 }
 
 .logo {
@@ -313,6 +305,7 @@ video {
   color: var(--colorDim);
   font-size: var(--fontXXS);
   display: flex;
+  justify-content: space-between;
   gap: 20px 40px;
   margin-bottom: 40px;
 }
@@ -476,6 +469,31 @@ video {
 
   .btn-mobile-menu {
     display: block;
+  }
+
+  .bottomNav {
+    flex-direction: column;
+  }
+
+  /* У эпла пункты сворачиваются в раскрывающееся меню */
+  .bottomNav a {
+    display: none;
+  }
+
+  /* Грязные хаки для адаптива */
+  .grid_keyFeatures {
+    grid-template-columns: 1fr !important;
+  }
+
+  .tile {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .tile__image {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
   }
 }
 
