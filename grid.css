@@ -13,11 +13,6 @@
 }
 
 .tile_2-cols-1-rows {
-    grid-column: auto/span 1;
-    grid-row: auto/span 1;
-}
-
-.tile_2-cols-1-rows {
     grid-column: auto/span 2;
     grid-row: auto/span 1;
 }
